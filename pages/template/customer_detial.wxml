@@ -1,0 +1,34 @@
+<!-- 顾客详情页模板 -->
+<template name='customer_info'>
+   <view style='display:flex;flex-direction:row;margin-top:1px;margin-left:2%; width:94%;background:white;' data-id='{{id}}'>
+   <image style="width:90px;height:80px;margin-left:6px;margin-top:6px;margin-bottom:6px;" src='{{path}}' mode='scaletoFill'/>
+      <view style="display:flex;flex-direction:column;margin-left:10px;font-size:16px">
+       <text style='margin-top:6px;' wx:if="{{status==3}}">状态：洗发中 </text> 
+       <text style='margin-top:6px;' wx:if="{{status==4}}">状态：理发中 </text> 
+       <text style='margin-top:6px;' wx:if="{{status!=3 && status!=4 }}">状态：等待中  </text>
+      <text style='margin-top:5px' decode='true'>理发次数：{{haircut_num}} &nbsp;&nbsp;&nbsp; 洗发次数：{{wash_num}}</text>  
+     <text style='margin-top:5px' decode='true'>上次发型：{{style_last}}  &nbsp;&nbsp;&nbsp;进店时长：{{time_stay}}</text>     
+      </view>
+   </view>
+</template>
+
+<!-- 历史消费记录模板 -->
+<template name='cost_list'>
+   <view style='display:flex;flex-direction:row;margin-top:0px;margin-left:2%;margin-bottom:0px; width:94%;background:white;border-width:5px;border-color:black; border-right: 1rpx solid black;border-top: 1rpx solid black;border-left: 1rpx solid black;border-bottom: 1rpx solid black;' data-id='{{id}}'>
+   <view style='display:flex;flex-direction:column;font-size:16px;margin-left:8px;margin-bottom:6px;'>
+    <image style="width:60px;height:55px;margin-top:6px;margin-left:5px;margin-bottom:6px;left:1px" src='{{pathS}}' mode='scaletoFill'/>
+    <text>开始照片</text>
+   </view>
+      <view style="display:flex;flex-direction:column;margin-left:25px;font-size:16px">
+     <text style='margin-top:5px' decode='true'>时间：{{time}}&nbsp;&nbsp;消费金额：{{cost}} </text>  
+       <text style='margin-top:5px' decode='true'>发型：{{style}}&nbsp;&nbsp;时长：{{time_stay}} </text>   
+     <text style='margin-top:5px' decode='true'> 发型师:{{name}}&nbsp;&nbsp;评分{{score}}</text>     
+      </view>
+      <navigator url='/pages/photo_share/share?share_img={{pathE}}&flag={{flag}}' >
+     <view style='display:flex;flex-direction:column;font-size:16px;margin-left:25px;margin-bottom:6px; '>
+      <image style="width:60px;height:55px;margin-top:6px;margin-left:5px;margin-bottom:6px;right:1px" src='{{pathE}}' mode='scaletoFill'/>
+       <text>完成照片</text>
+       </view>
+      </navigator>
+   </view>
+</template>

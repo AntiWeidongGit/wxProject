@@ -1,0 +1,55 @@
+<view class="titleView">
+ <view class="return" bindtap='returnBtn'>
+  <image class="returnImg" src='../../icon/arrow_xia.png' mode='scaleToFill'></image>
+  <text class="" style=' margin-left:10rpx;margin-top:30rpx;line-height:0rpx;' bindtap='return'>返回</text>
+ </view>
+ <view class="title">发现</view>
+ </view>
+ <view>
+   <view class="topBar">
+     <view class="bar" bindtap='serviceList'>服务项目</view>
+     <view class="bar"bindtap='otherList'>其他项目</view>
+   </view>
+   <view class="serviceList" style='{{serviceDisplay}}'>
+   <view class="explain">服务费用折扣：{{explain}}</view>
+
+     <checkbox-group class="checkboxGroup" bindchange="checkboxChange">
+     <label  class="checkboxLab">
+      <checkbox class="checkbox"  value='洗吹' checked=''>
+      洗吹
+      </checkbox> 
+       <view class="money">${{item.money}}</view>
+      <view  class="moneyYuan"> ${{item.moneyYuan}}</view>
+      </label  >
+      <label class="checkboxLab">
+      <checkbox class="checkbox" value='洗剪吹' checked=''>
+      洗剪吹
+      </checkbox> 
+       <view class="money">${{item.money}}</view>
+      <view  class="moneyYuan"> ${{item.moneyYuan}}</view>
+      </label>
+      <view class="ranfa" class="checkboxLab" bindtap='ranfa' >
+      染发
+      </view>
+      <label class="checkboxLab" style='{{ranfa}}' wx:for="{{item}}" wx:key="{{item}}">
+      <checkbox class="checkbox" value='{{item.name}}' checked='{{item.checked}}'>
+       {{item.value}}
+      </checkbox> 
+       <view class="money">${{item.money}}</view>
+      <view  class="moneyYuan"> ${{item.moneyYuan}}</view>
+      </label>
+       <view class="ranfa" class="checkboxLab" bindtap='tangfa' >
+      烫发
+      </view>
+      <label class="checkboxLab" style='{{tangfa}}' wx:for="{{item2}}"  wx:key="{{item2}}">
+      <checkbox class="checkbox" value='{{item.name}}' checked='{{item.checked}}'>
+       {{item.value}}
+      </checkbox> 
+       <view class="money">${{item.money}}</view>
+      <view  class="moneyYuan"> ${{item.moneyYuan}}</view>
+      </label>
+     </checkbox-group>
+        
+   </view>
+   <button form-type='submit' id="toChoShop" class="toChoShop" style='' bindtap='toChoShop'>下一步</button>
+ </view>

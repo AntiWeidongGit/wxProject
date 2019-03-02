@@ -1,0 +1,35 @@
+<!--pages/Customer_detial/Cdetial.wxml-->
+<!-- 顾客详情页面 -->
+<!-- 引入模板 -->
+<import src='../template/customer_detial.wxml'/>
+<!-- <view>
+   <view wx:for="{{customer_detail}}" wx:key='id'>
+      <template is="customer_info" data="{{id:item.id,haircut_num:item.enabled,path:item.photo_url,status:item.status,wash_num:item.wash_num,style_last:item.style_last,time_stay:item.time_stay}}"/>
+   </view>
+</view> -->
+
+<view style='display:flex;flex-direction:row;margin-top:1px;margin-left:2%; width:94%;background:white;' data-id='{{customer_detail.id}}'>
+   <image style="width:90px;height:80px;margin-left:6px;margin-top:6px;margin-bottom:30px;" src='{{customer_detail.photo_url}}' mode='scaletoFill'/>
+      <view style="display:flex;flex-direction:column;margin-left:10px;font-size:16px">
+       <text style='margin-top:6px;' wx:if="{{customer_detail.status==3}}">状态：洗发中 </text> 
+       <text style='margin-top:6px;' wx:elif="{{customer_detail.status==4}}">状态：理发中 </text> 
+       <text style='margin-top:6px;' wx:elif="{{customer_detail.status==6}}">状态：理发完成 </text> 
+       <text style='margin-top:6px;' wx:else>状态：等待中  </text>
+      <text style='margin-top:5px' decode='true'>理发次数：{{cost_list.length}} &nbsp;&nbsp;&nbsp;</text>  
+     <text style='margin-top:5px' decode='true'><!--上次发型：{{customer_detail.name}}  &nbsp;&nbsp;&nbsp;-->进店时长：{{customer_detail.enter_time}}</text>     
+      </view>
+   </view>
+
+<view style='display:flex;flex-direction:row;' wx:if="{{userType==1}}">
+  <button class='button' bindtap='startService' disabled="{{customer_detail.status!=1}}">开始理发</button>
+  <button class='button' bindtap='endService' disabled="{{customer_detail.status!=4}}">结束理发</button>
+  <!-- <button class='button' bindtap='endService' disabled="{{customer_detail.status!=4}}" wx:if='{{customer_detail.status==4}}'>结束理发</button>
+   <button class='button'  bindta='sendInfo' disabled="{{customer_detail.status==4}}" wx:if='{{customer_detail.status!=4}}'>提醒支付</button> -->
+</view>
+
+<view>
+ <text style='font-size:17px;margin-bottom:10px;' decode='true'>&nbsp;&nbsp;历史消费记录:</text>
+   <view wx:for="{{cost_list}}" wx:key='id'>
+      <template is="cost_list" data="{{id:item.id,time:item.show_time,cost:item.price,style:item.style,pathS:item.start_trackfile,pathE:item.end_trackfile,name:item.barber_name,score:item.score,time_stay:item.used_time}}"/>
+   </view>
+</view>

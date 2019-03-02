@@ -1,0 +1,22 @@
+<!--pages/myBarber/myBarber.wxml-->
+<!-- <button class='buttonLeft' bindtap='backToprevPage'>
+       <image src='../../icon/back.png' mode='widthFix' class='imageLeft'></image>
+</button> -->
+<view class="cashListView" bindtap='outMenu'>
+   <block wx:for="{{cashLists}}" wx:key="cashLists">
+    <view class="item" bindtap='navBtn' id="{{index}}">
+     <view class="img">
+      <image src='{{item.img}}' style='width:58px;height:56px;border:1px solid black'></image>
+     </view>
+      <view class="des">
+      <view class="name">{{item.name}}</view>
+      <view class='hr'></view>
+     <view class="price">
+       {{item.price}}
+     </view>
+     </view>
+    </view>
+    <view class="hr"></view>
+  </block>
+</view>
+

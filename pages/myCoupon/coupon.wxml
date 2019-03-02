@@ -1,0 +1,23 @@
+<!--pages/myCoupon/coupon.wxml-->
+<import src='../template/coupon.wxml'/>
+
+<view class="titleView">
+ <view class="return" bindtap='returnBtn'>
+  <image class="returnImg" src='../../icon/arrow_xia.png' mode='scaleToFill'></image>
+  <text class="" style=' margin-left:10rpx;margin-top:30rpx;line-height:0rpx;'>返回</text>
+ </view>
+ <view class="title">发现</view>
+ </view>
+
+<view class="main" style='margin-top:100rpx;background-color:#f4f4f4'>
+  <view class="yue" style='height:300rpx;display:flex;flex-direction:column;margin-bottom:20rpx;background-color:white'>
+  <text style='font-size:86rpx;font-weight:600;margin-top:60rpx;margin-left:40rpx;'>15.00{{money.balance}}</text>
+  <label style=" margin-left:40rpx;color:grey;font-size:24rpx;">当前余额 (元)</label>
+  </view>
+
+   <view wx:for="{{discountList}}" wx:key='id' >
+      <template is="coupon" data="{{id:item.id,path:icon_path,money:item.value,time:item.price}}"/>
+
+</view>
+
+</view>

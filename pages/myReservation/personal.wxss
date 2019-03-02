@@ -1,0 +1,307 @@
+.titleAll{
+  background-color: gold
+}
+.titleView{
+ display:flex;
+   position: fixed;
+  top:00rpx;
+  left:00rpx;
+  height: 110rpx;
+  width: 100%;
+  margin-top: 0rpx;
+   background-color: gold;
+
+}
+.return{
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  margin-top: 50rpx;
+  margin-left: 10rpx;
+  font-size: 20px;
+  color: white;
+ 
+}
+.returnImg{
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  width: 20rpx;
+  height: 40rpx;
+  color: white;
+}
+.title{
+  position: fixed;
+  left:330rpx;
+  top:54rpx;
+  font-size: 20px;
+  /* margin-top: 54rpx;
+  margin-left: 200rpx; */
+   color: white;
+}
+.viewContainer{
+  padding:0px;
+  display:flex;
+  flex-direction:column;
+  height: 100%;
+  background-color: gainsboro;
+ 
+}
+.headView{
+  margin-top:120rpx;
+  display:flex;
+  flex-direction:row;
+  height:300rpx;
+  
+
+}
+.image2{
+  width:65px;
+  height:65px;
+  border-radius: 50%;
+  margin-left:45rpx;
+  margin-top:7%;
+  margin-right: 35rpx;
+  background-color: #ccc
+}
+
+.headText{
+  display:flex;
+  flex-direction:column;
+  padding:0rpx;
+  margin-top:95rpx;
+}
+.hairMark{
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+  background-color: white;
+}
+.hairMark text{
+ margin-left: 26rpx;
+ margin-top: 23rpx;
+}
+.hairMark>text:nth-child(2){
+  font-size: 20px;
+  margin-left: 374rpx;
+ margin-top: 20rpx;
+}
+
+.hairStyleView{
+  position: relative;
+  top: -90rpx;
+  left: auto;
+  right: auto;
+  font-size: 14px;
+    background-color: white;
+  /* display:flex;
+   justify-content:center; */
+   display: flex;
+   flex-direction: column;
+   margin-left: auto;
+   margin-right: auto;
+  /* height: 380rpx; */
+  height:352rpx ;
+  width: 690rpx;
+  box-shadow:0 0 0px #000;
+  border:1px solid #0cc4b1;
+  border-radius: 30rpx;
+}
+.myHairStyle{
+  height: 264rpx;
+  width: 100%;
+ 
+  border-top-left-radius: 30rpx;
+  border-top-right-radius: 30rpx;
+    display:flex;
+   justify-content:center;
+     font-size: 13px;
+    background-color: white;
+}
+.myHairStyle_btn{
+  /* width: 60px; */
+  font-size: 26rpx;
+  color: #0cc4b1;
+  height: 25px;
+  border:1px solid #0cc4b1;
+  border-radius: 30px;
+  line-height: 25px;
+position:absolute;
+}
+.hairStyleBottom{
+  border-bottom-left-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
+  height:88rpx;
+   width:100%;
+   font-size: 30rpx;
+   text-align: center;
+   line-height: 80rpx;
+   color: #0cc3b0;
+  border-top: solid 1px  #0cc4b1;
+}
+.image3{
+  width:186rpx;
+  height: 186rpx;
+  margin-top: 5.5%;
+  border-radius: 60px;
+  background-color: gainsboro;
+  position: absolute;
+  left:auto;
+  right: auto;
+ 
+}
+
+.view-left{
+  margin:0px;
+  display:flex;
+  flex-direction:column;
+  text-align: center;
+  margin-right: 50rpx;
+  
+
+}
+.view-right{
+  margin: 0px;
+  display:flex;
+  flex-direction:column;
+  text-align: center;
+  margin-left: 50rpx;
+  
+  
+}
+
+.lastList{
+  display:flex;
+  flex-direction:column;
+  font-size:17px;
+  margin:0px;
+  margin-top: -18px;
+ background-color: white;
+}
+
+.text2{
+  display:flex;
+  flex-direction:row;
+ background-color: white;
+ margin-bottom: 5rpx;
+ height: 95rpx;
+  margin-left: 0px;
+  font-size: 18px;
+  font-weight: 400;
+
+}
+
+.image4{
+  width:50rpx;
+  height:50rpx;
+  
+  /* background-color: #ccc; */
+  margin-bottom: 5px;
+  margin-top:24rpx;
+  margin-left: 25rpx;
+  margin-right: 19rpx;
+ 
+}
+
+.image5{
+  width:20rpx;
+  height:30rpx;
+  
+  /* background-color: #ccc; */
+  margin-bottom: 5px;
+  margin-top:35rpx;
+  margin-left: 10rpx;
+  margin-right: 25rpx;
+ 
+}
+.column{
+  /* margin-right: 40px;  */
+  display:flex;
+  flex-direction:column;
+  text-align: center;
+}
+.text4{
+  font-size: 13px;
+  display:flex;
+  flex-direction:row;
+  width:90px;
+  margin: 0px;
+  margin-right: 10px;
+  color: white;
+}
+.textName{
+  font-size: 20px;
+  font-weight: 500;
+  margin-top:-13px;
+  margin-bottom:5px;
+color:white;
+}
+.image{
+  width:60px;
+  height:45px;
+  background-color: #ccc;
+  margin-bottom: 5px;
+}
+.buttonLeft{
+  margin-top: 0%;
+  margin-left: 0%;
+  width: 55px;
+  height: 40px;
+  border: none;
+  border-left-color: white;
+  border-top-color: white;
+  border-bottom-color: white;
+  border-right-color: white;
+  border-radius: 150px;
+  background: white;
+  margin-bottom: 10px;
+}
+.imageLeft{
+  width: 20px;
+  height: 23px;
+  margin-left: -20%; 
+  margin-top: 0px;
+  background: white;
+}
+
+.text1{
+  margin-left: 16px;
+  font-size: 18px;
+  color: rgb(10, 0, 0);
+}
+
+
+
+
+
+.setBtn{
+  margin-right: 5px;
+  margin-bottom: 0px;
+  padding: 1px;
+  line-height: 16px;
+  width: 45px;
+  height: 23px;
+  font-size: 11px;
+   display: inline-block;
+  
+  
+}
+.changeBtn{
+  color: white;
+  font-size: 12px;
+  padding: 1px;
+  
+  margin-top:36rpx;
+  margin-right:0rpx;
+  background-color: rgb(108, 205, 212);
+  border-radius: 10rpx;
+  height: 30px;
+  width: 90px;
+  display: inline-block;
+
+}
+.btnView{
+  display: flex;
+  flex-direction: column;
+
+  margin-left: 52px;
+}

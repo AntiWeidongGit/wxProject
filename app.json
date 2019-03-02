@@ -1,0 +1,99 @@
+{
+  "pages": [
+    "pages/myDateServer/myDateServer",
+    "pages/myReservation/personal",
+    "page/myDateServer/Wxpay",
+    
+    "pages/myShareShop/myShareShop",
+    "pages/myDateServer/chooseShop",
+    
+    "pages/myReservation/jumpToBarber",
+    
+    
+    "pages/myDateServer/DateServerInfo",
+    
+   
+   
+     "pages/ShopList/List",
+    "pages/camaraIdentity/showPhoto",
+    "pages/PersonalHome/CustomerHome",
+    "pages/PersonalHome/PersonalHome",
+    "pages/FaceIdentity/Identity",
+    
+    "pages/ShopList/personal",
+    "pages/camaraIdentity/camaraIdentity",
+   
+    
+    "pages/Customer_detial/Cdetial",
+    "pages/Main/Main",
+   
+   
+    "pages/FaceLogin/Login",
+    
+    "pages/UserLogin/ULogin",
+    "pages/LoginConfirm/LoginConfirm",
+    "pages/IDConfirm/IDConfirm",
+    "pages/IDSuccess/idSuccess",
+    "pages/ShopDetial/detial",
+    
+    "pages/Reservation/reserve",
+    "pages/Subscribe_action/subscribe",
+    
+    "pages/subscribe_Success/sub_Success",
+    "pages/myBarber/myBarber",
+    "pages/myCoupon/coupon",
+    "pages/myHistoryCost/cost",
+   
+    "pages/myOrders/orders",
+    "pages/endService/end",
+    "pages/Dial/dial",
+    "pages/end_Cus/end_Cus",
+    "pages/QR_code/code",
+    "pages/cashdraw/cashdraw",
+    "pages/photo_share/share"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "AIBarber",
+    "navigationBarTextStyle": "black",
+        "navigationStyle": "custom"
+    
+  },
+  "tabBar": {
+    "color": "#929292",
+    "selectedColor": "#FFA900",
+    "backgroundColor": "#FAFAFA",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/ShopList/List",
+        "text": "主页",
+        "iconPath": "icon/tab_icon_home_default.png",
+        "selectedIconPath": "icon/tab_icon_home_selected.png"
+      },
+      {
+        "pagePath": "pages/PersonalHome/PersonalHome",
+        "text": "店铺",
+        "iconPath": "icon/tab_icon_my_default.png",
+        "selectedIconPath": "icon/tab_icon_my_selected.png"
+      },
+        {
+          "pagePath": "pages/PersonalHome/PersonalHome",
+          "text": "发现",
+          "iconPath": "icon/tab_icon_my_default.png",
+          "selectedIconPath": "icon/tab_icon_my_selected.png"
+        },
+        {
+          "pagePath": "pages/myReservation/personal",
+          "text": "个人",
+          "iconPath": "icon/tab_icon_my_default.png",
+          "selectedIconPath": "icon/tab_icon_my_selected.png"
+        }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000
+  },
+  "debug": false
+}

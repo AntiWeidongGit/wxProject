@@ -1,0 +1,5 @@
+/* pages/QR_code/code.wxss */
+.img{
+  display:flex;                   
+ justify-content: center;        
+}

@@ -1,0 +1,26 @@
+/* pages/end_Cus/end_Cus.wxss */
+.orderDetail{
+  margin-left: 5%;
+  margin-top: 10px;
+  width: 90%;
+  border-bottom: 2px solid black;
+  font-size: 16px;
+  color: black;
+  display: flex;
+  flex-direction: row;
+}
+.orderDetail_text{
+  display:flex;
+  flex-direction:column;
+  margin-left:15px;
+  font-size:16px;
+  color: black;
+}
+.button{
+  width: 140px;
+  height: 40px;
+  margin-left: 50%;
+  margin-top: 40px;
+  font-size: 16px;
+  color: black;
+}

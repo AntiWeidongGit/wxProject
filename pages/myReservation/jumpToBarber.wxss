@@ -1,0 +1,176 @@
+/* pages/myReservation/jumpToBarber.wxss */
+.titleView{
+ display:flex;
+   position: fixed;
+  top:0rpx;
+  left:00rpx;
+  height: 110rpx;
+  width: 100%;
+  margin-top: 0rpx;
+
+}
+.return{
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  margin-top: 50rpx;
+  margin-left: 10rpx;
+  font-size: 20px;
+  color: black
+ 
+}
+.returnImg{
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  width: 20rpx;
+  height: 40rpx;
+  color: black
+}
+.title{
+  font-size: 20px;
+  margin-top: 54rpx;
+  color:black;
+  margin-left: 220rpx;
+}
+
+
+.main{
+  display: flex;
+  flex-direction: column;
+
+}
+.progressBar{
+  margin-top: 150rpx;
+  width: 100%;
+  height: 30rpx;
+   display:flex;
+   justify-content:center;
+   /* flex-direction: row; */
+}
+.circle1{
+  width: 40rpx;
+  height: 40rpx;
+  background-color:#0cc4b1;
+  border-radius: 20rpx;
+  margin-right: -20rpx;
+}
+.circle2{
+
+  width: 40rpx;
+  height: 40rpx;
+  background-color:#0cc4b1;
+  border-radius: 20rpx;
+ 
+}
+.circle3{
+  width: 40rpx;
+  height: 40rpx;
+  background-color:#0cc4b1;
+  border-radius: 20rpx;
+  margin-left:-20rpx;
+}
+
+.line1{
+  
+  margin-top:19rpx;
+   width: 134rpx;
+  height: 0px;
+  border:1px solid #0cc4b1;
+}
+.line2{
+  margin-right: -20rpx;
+  margin-top:19rpx;
+   width: 134rpx;
+  height: 0px;
+  border:1px solid #0cc4b1;
+}
+.line3{
+  margin-left:-20rpx;
+  margin-top:19rpx;
+   width: 134rpx;
+  height: 0px;
+  border:1px solid #0cc4b1;
+}
+.line4{
+  margin-top:19rpx;
+   width: 134rpx;
+  height: 0px;
+  border:1px solid #0cc4b1;
+}
+.view1{
+  margin-top: 60px;
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+ /* border:1px solid #0cc4b1; */
+
+}
+.headPhoto{
+  width: 300rpx;
+  height: 300rpx;
+  border-radius: 200rpx;
+  border:1px solid #0cc4b1;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40rpx;
+  
+}
+.byCamara{
+  margin-top: 250rpx;
+  width:690rpx;
+  height: 88rpx;
+   border-radius: 44rpx;
+  
+   background-color: #0cc4b1;
+   color: white
+}
+.byAlbum{
+  width:690rpx;
+  height: 88rpx;
+  margin-top: 20rpx;
+   border-radius: 44rpx;
+   background-color: #0cc4b1;
+   color: white
+}
+
+.view2{
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+ /* border:1px solid #0cc4b1; */
+}
+.IDCardPhoto{
+  width: 400rpx;
+  height: 260rpx;
+}
+
+.view3{
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+ /* border:1px solid #0cc4b1; */
+}
+.inputText{
+  height:110rpx;
+  border-bottom: 1px solid #0cc4b1;
+}
+.getCode{
+  font-size: 33rpx;
+  padding: 10rpx;
+  padding-top:0px;
+  padding-bottom: 0px;
+  width: 230rpx;
+ border-radius: 40rpx;
+ margin-top: -95rpx;
+ margin-right: 20rpx;
+}
+.submit{
+  margin-top: 720rpx;
+   width:690rpx;
+  height: 88rpx;
+   border-radius: 44rpx;
+   background-color: #0cc4b1;
+   color: white
+}

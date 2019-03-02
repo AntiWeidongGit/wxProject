@@ -1,0 +1,53 @@
+
+<view class="titleView">
+ <view class="return" bindtap='returnBtn'>
+  <image class="returnImg" src='../../icon/arrow_xia.png' mode='scaleToFill'></image>
+  <text class="" style=' margin-left:10rpx;margin-top:30rpx;line-height:0rpx;'>返回</text>
+ </view>
+ <view class="title">发现</view>
+ </view>
+
+ <view class="main">
+ <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="progressBar">
+     <view class="circle1"></view>
+       <view class="line1"></view>
+        <view class="line2"></view>
+       <view class="circle2"></view>
+        <view class="line3"></view>
+         <view class="line4"></view>
+         <view class="circle3"></view>
+    </view>
+    <view class="view1" style='{{hidAndSho1}}' >
+    <view>
+      <image class="headPhoto" src="{{headPhotoBgC}}"></image>
+      <view class="headPhotoText1">拍摄或上传正面脸照</view>
+      <view class="headPhotoText2">系统监测到您还没有上传自己头像</view>
+    </view>
+    <button class="byCamara" bindtap='takeByPhoto'>用手机拍摄</button>
+    <button class="byAlbum" bindtap='takeByAlbum'>从相册上传</button>
+     <button class="byAlbum" bindtap='nextTo2'>下一步</button>
+    </view>
+
+     <view class="view2" style='{{hidAndSho2}}'>
+    <view>
+      <image class="IDCardPhoto" src="{{idCardFront}}" bindtap='takeByPhoto2'></image>
+      <view class="" style='font-size:28rpx;color:#999999'>上传身份证正面</view>
+      <image class="IDCardPhoto" src="{{idCardBehind}}"  bindtap='takeByPhoto3' style='margin-top:100rpx'></image>
+       <view style='font-size:28rpx;color:#999999'>上传身份证背面</view>
+    </view>
+    <button class="byCamara" style='margin-top:200rpx'  bindtap='nextTo3'>下一步</button>
+    </view>
+
+     <view class="view3" style='{{hidAndSho3}}'>
+    <view>
+      <input type='text' name="telNumber" class="inputText" placeholder='请输入手机号' style='text-align:left'/>
+      <input type='text'name="verificationCode" class="inputText" placeholder='请输入验证码' style='text-align:left'/>
+      <button bindtap='getCode' class="getCode"> 获取验证码</button>
+    </view>
+    <button class="submit" form-type='submit'>提交信息</button>
+    </view>
+    </form>
+ </view>
+
+

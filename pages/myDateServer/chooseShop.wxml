@@ -1,0 +1,73 @@
+<import src='../template/shopList_order.wxml'/>
+
+<view class="titleView">
+ <view class="return" bindtap='returnBtn'>
+  <image class="returnImg" src='../../icon/arrow_xia.png' mode='scaleToFill'></image>
+  <text class="" style=' margin-left:10rpx;margin-top:30rpx;line-height:0rpx;' bindtap='returnToServer'>返回</text>
+ </view>
+ <view class="title">发现</view>
+ </view>
+ <form bindsubmit='formSubmit' bindreset='formReset'>
+ <view class="container">
+ <view class='radioView'>
+ <radio-group class="radio-group" bindchange="radioChange">
+  <label class="radio">
+    <radio value="noTime" checked='' />
+    不选时间
+  </label>
+   <label class="radio">
+    <radio value="yesTime" checked=true" />
+    选择时间
+  </label>
+</radio-group>
+ <label>
+ <checkbox class='adjust' value="adjust" checked="{{item.checked}}" />
+   接受调整
+   </label>
+ </view>
+ <view class="chooseTime">
+   <view class="{{(flag==1||flag==4||flag==7)?'timeTable':'normal'}}" style='height:32%;font-size:28rpx; line-height:93rpx; '>上午(12:00)之前</view>
+   <view class="{{(flag==2||flag==5||flag==8)?'timeTable':'normal'}}" style='height:32%;font-size:28rpx; line-height:70rpx;display:flex; flex-direction:column;'><text style='margin-top:-10rpx;'>下午</text><text style='margin-top:-25rpx;'>(12:00-18:00)</text></view>
+   <view class="{{(flag==3||flag==6||flag==9)?'timeTable':'normal'}}"style='height:32%;font-size:28rpx; line-height:93rpx;'>晚上(18:00)之后</view>
+   <view class="{{flag==1?'timeTable':'normal'}}" bindtap='choiceTime' id="1">今天上午</view>
+   <view class="{{flag==2?'timeTable':'normal'}}" bindtap='choiceTime' id="2">今天下午</view>
+   <view class="{{flag==3?'timeTable':'normal'}}" bindtap='choiceTime' id="3">今天晚上</view>
+   <view class="{{flag==4?'timeTable':'normal'}}" bindtap='choiceTime' id="4">明天上午</view>
+   <view class="{{flag==5?'timeTable':'normal'}}" bindtap='choiceTime' id="5">明天下午</view>
+   <view class="{{flag==6?'timeTable':'normal'}}" bindtap='choiceTime' id="6">明天晚上</view>
+   <view class="{{flag==7?'timeTable':'normal'}}" bindtap='choiceTime' id="7">后天上午</view>
+   <view class="{{flag==8?'timeTable':'normal'}}" bindtap='choiceTime' id="8">后天下午</view>
+   <view class="{{flag==9?'timeTable':'normal'}}" bindtap='choiceTime' id="9">后天晚上</view>
+ </view>
+
+  <view class='radioView2'>
+ <radio-group class="radio-group" bindchange="radioChange">
+  <label class="radio">
+    <radio value="noTime" checked='' />
+    不限地址
+  </label>
+   <label class="radio">
+    <radio value="yesTime" checked=true" />
+    选择店铺
+  </label>
+</radio-group>
+ <label>
+ <checkbox class='adjust' value="adjust" checked="{{item.checked}}" />
+   接受调整
+   </label>
+ </view>
+
+  <view class="section__title">
+  <scroll-view scroll-y="true"
+    style="height: 400rpx;width:600rpx;border:1px solid blue;"
+  >
+  <block wx:for="{{shopList}}" wx:key="{{shopList}}" wx:for-item="shop">
+ 
+    <template is="shoplist_order" data="{{id:shop.storeId,ImgSrc:shop.headImage,name:shop.name,address:shop.address,distance:shop.distance,checked:shop.checked}}"/>
+  
+    </block>
+  </scroll-view>
+  </view>
+   <button form-type='submit' bindtap='toServerInfo' bindtap='wxPay'>下一步</button>
+ </view>
+</form>

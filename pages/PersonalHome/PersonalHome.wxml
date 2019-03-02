@@ -1,0 +1,16 @@
+<!--pages/LoginMain/LoginMain.wxml-->
+
+<!--<import src="../template/dialog.wxml"/>
+<template data="{{...myDialog}}" is="dialog" />-->
+
+<!-- <view class="container"> -->
+  <block wx:if="{{userType != 1 && faceid != null}}">
+    <include src="./CustomerHome.wxml"/>
+  </block>
+  <block wx:elif="{{faceid == null}}">
+    <include src="./LoginMain.wxml"/>
+  </block>
+  <block wx:else>
+    <include src="./BarberHome.wxml"/>
+  </block>
+<!-- </view> -->

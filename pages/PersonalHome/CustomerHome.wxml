@@ -1,0 +1,88 @@
+
+ <view style='display:flex;flex-direction:row;font-size:17px;'>
+    <image class='image2' src='{{info.photo_url}}' mode='scaleToFill'/>
+    <view style='display:flex;flex-direction:column;margin-top:20px;'>
+      <text>理发次数：{{info.numbers}}</text>
+      <text style='margin-top:6px;'>我的积分：{{info.point}}</text>
+    </view>
+ </view>
+    <button bindtap='changeToBarber' class='button'>切换为理发师</button>
+ <view class='text1'>
+  <text wx:if="{{reservation != null && reservation != ''}}">我的预约:</text> 
+ </view>
+
+<view class='top' wx:if="{{reservation != null && reservation != ''}}">
+    <view class='column'>
+      <image class='image' src='../../icon/icon_time.png' mode='scaleToFill'/>
+      <text>{{reservation.sub_time_str}}</text>
+   </view>
+   <view class='column'>
+      <image class='image' src='{{reservation.barber_photo}}' mode='scaleToFill'/>
+      <text>{{reservation.barber_name}}</text>
+   </view>
+   <view class='column'>
+      <image class='image' src='{{reservation.store_url}}' mode='scaleToFill'/>
+      <text>{{reservation.store_name}}</text>
+   </view>
+</view>
+
+<view class='code' wx:if="{{reservation != null && reservation != ''}}">
+  <text>预约码：{{reservation.sub_code}}\n</text>
+</view>
+
+<view class='text1'>
+    <text wx:if="{{cur_service != null && cur_service != ''}}">当前服务:</text>
+ </view>
+
+<view class='top' wx:if="{{cur_service != null && cur_service != ''}}">
+    <view class='column'>
+      <image class='image' src='../../icon/icon_time.png' mode='scaleToFill' wx:if="{{cur_service.status==0}}"/>
+      <image class='image' src='../../icon/icon_time.png' mode='scaleToFill' wx:if="{{cur_service.status==1}}"/> 
+      <image class='image' src='../../icon/icon_time.png' mode='scaleToFill' wx:if="{{cur_service.status==2}}"/>
+      <text wx:if="{{cur_service.status==0}}">进行中</text>
+      <text wx:if="{{cur_service.status==1}}">未支付</text>
+      <text wx:if="{{cur_service.status==2}}">已支付</text>
+      <!-- <image class='image' src='../../icon/icon_time.png' mode='scaleToFill'/> -->
+   </view>
+   <view class='column'>
+      <image class='image' src='{{cur_service.barber_photo}}' mode='scaleToFill'/>
+      <text>{{cur_service.barber_name}}</text>
+   </view>
+   <view class='column'>
+      <image class='image' src='{{cur_service.store_url}}' mode='scaleToFill'/>
+      <text>{{cur_service.store_name}}</text>
+   </view>
+</view>
+
+<view class='text1'>
+    <text wx:if="{{reservation!=null}}">我的发型:</text>
+ </view>
+<view style='display:flex;flex-direction:row;font-size:16px;border-width:5px;border-color:black; border-right: 1rpx solid black;border-top: 1rpx solid black;border-left: 1rpx solid black;border-bottom: 1rpx solid black;margin-left:10px;margin-right:10px;margin-top:10px;'>
+    <view class='view-left'>
+      <text style='margin-top:10px'>颜值：{{attribute.beauty}}</text>
+      <text style='margin-top:22px'>脸型：{{attribute.face_shape}}</text>
+      <text style='margin-top:22px'>肤色：{{attribute.race}}</text>
+
+    </view>
+     <image class='image3' src='{{attribute.face_file}}' mode='scaleToFill'/>
+    <view class='view-right'>
+      <text style='margin-top:10px'>年龄：{{attribute.age}}</text>
+      <text style='margin-top:22px'>性别：{{attribute.gender}}</text>
+      <text style='margin-top:22px'>{{attribute.expression}}</text>
+    </view>
+ </view>
+
+ <view style='display:flex;flex-direction:column;font-size:17px;'>
+      <view class='text2' bindtap='goToMyBarber'>
+      <text style='width:80%;'>我的发型师：</text>
+      <image class='image4' src='../../icon/icon_rightarrow.png' mode='scaleToFill'/>
+    </view> 
+    <view class='text2' bindtap='goToCoupon'>
+      <text style='width:80%;'>我的优惠券：</text>
+      <image class='image4' src='../../icon/icon_rightarrow.png' mode='scaleToFill'/>
+    </view>
+    <view class='text2' bindtap='goToConsumption'>
+      <text style='width:80%;'>我的消费记录：</text>
+      <image class='image4' src='../../icon/icon_rightarrow.png' mode='scaleToFill'/>
+    </view>
+ </view>

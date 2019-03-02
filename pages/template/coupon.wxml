@@ -1,0 +1,10 @@
+<template name='coupon'>
+  <view style='display:flex;flex-direction:row;margin-top:0px; width:100%;background:white; border-bottom:1px solid #f4f4f4;height:130rpx;' data-id='{{id}}'>
+  <view class="moneyNT" style='display:flex;flex-direction:column;margin-left:40rpx;'>
+   <view class="moneyName" style='margin-top:30rpx;font-size:30rpx;color:#333333' >来源{{name}}</view>
+     <view class="moneyTime" style='font-size:26rpx;color:#999999'>2019-2-2{{time}}</view>
+     </view>
+     <view class="money" style='margin-left:400rpx;margin-top:40rpx;font-size:34rpx;color:#ff9a46'>+200.00{{money}}</view>
+    </view>
+    <view style='line' style='width:4%;height:0px;border:1px solid white;margin-left:0px;margin-top:-2rpx;;'></view>
+</template>

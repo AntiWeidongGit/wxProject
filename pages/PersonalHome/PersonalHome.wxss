@@ -1,0 +1,34 @@
+/* pages/PersonalHome/PersonalHome.wxss */
+@import "./LoginMain.wxss";
+@import "./CustomerHome.wxss";
+@import "./BarberHome.wxss";
+
+.container {
+  width: 100%;
+  height: 100%;
+  background: #FEFEFE;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+  padding: 2rpx 0;
+  box-sizing: content-box;
+}
+
+/***************************************/
+/* LoginMain Page wxss BEGIN */
+
+/* LoginMain Page wxss END */
+/***************************************/
+
+/***************************************/
+/* CustomerHome Page wxss BEGIN */
+
+/* CustomerHome Page wxss END */
+/***************************************/
+
+/***************************************/
+/* BarberHome Page wxss BEGIN */
+
+/* BarberHome Page wxss END */
+/***************************************/

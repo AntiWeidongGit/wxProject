@@ -1,0 +1,11 @@
+<!--pages/myHistoryCost/cost.wxml-->
+<import src='../template/customer_detial.wxml'/>
+<view class='text'>
+  <text>我的消费记录</text>
+</view>
+
+<view>
+   <view wx:for="{{cost_list}}" wx:key='id'>
+      <template is="cost_list" data="{{id:item.id,time:item.show_time,cost:item.price,style:item.style,pathS:item.start_trackfile,pathE:item.end_trackfile,name:item.barber_name,score:item.score,time_stay:item.used_time,flag:1}}"/>
+   </view>
+</view>

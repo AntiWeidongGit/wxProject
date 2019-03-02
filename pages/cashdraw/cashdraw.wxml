@@ -1,0 +1,52 @@
+
+
+<!--web-view src="https://www.imcou.com/static/quiz/cashdraw.html"></web-view-->
+<view class="container">
+  <view class="root">
+    <!--block wx:if="{{}}"-->
+      <view class="q-item">
+        <text class="q-title">提现到</text>
+        <view class="q-op">
+          <text class="op-descrip"> 微信钱包 > 零钱 </text>
+          <text class="op-descrip"> 1—7个工作日到帐 </text>
+        </view>
+      </view>
+      <view class="q-item">
+        <text class="q-title">当前余额：</text>
+        <view class="q-input">
+          <text class="q-title">{{balance}}</text>
+        </view>
+        <view class="q-more">
+          <text>元</text>
+        </view>
+      </view>
+      <view class="q-item">
+        <text class="q-title">提现金额：</text>
+        <view class="q-input">
+          <input name="drawInput" 
+            type="digit" value="{{drawValue}}"
+            bindinput="drawInputEvent"
+            placeholder="每次至少10元" maxlength="8"/>
+        </view>
+        <view class="q-more">
+          <text>元</text>
+        </view>
+      </view>
+      <view class="q-tip">
+        <text wx:if="{{balance < 1.0}}">余额不足10元，无法提现</text>
+      </view>
+      <view class="q-tip">
+        <text wx:if="{{hasDraw}}">每天最多提现1次，今天已经提现过了</text>
+      </view>
+
+      <button class="small-button" disabled="{{balance < 10.0 || hasDraw}}"
+        bindtap="cashDrawEvent">提现</button>
+
+    <!--/block-->
+  </view>
+
+  <!--view class="middle-view">
+    <button class="middle-button" disabled="{{balance < 10.0 || hasDraw}}"
+      bindtap="cashDrawEvent">提现</button>
+  </view-->
+</view>

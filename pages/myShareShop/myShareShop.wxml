@@ -1,0 +1,16 @@
+<import src='../template/shopList_order.wxml'/>
+
+<view class="titleView">
+ <view class="return" bindtap='returnBtn'>
+  <image class="returnImg" src='../../icon/arrow_xia.png' mode='scaleToFill'></image>
+  <text class="" style=' margin-left:10rpx;margin-top:30rpx;line-height:0rpx;'>返回</text>
+ </view>
+ <view class="title">发现</view>
+ </view>
+ <view class="shareShopView">
+   <block wx:for="{{shopList}}" wx:key="{{shopList}}" wx:for-item="shop">
+ 
+    <template is="shoplist_order" data="{{id:shop.storeId,ImgSrc:shop.headImage,name:shop.name,address:shop.address,distance:shop.distance,checked:shop.checked}}"/>
+  
+    </block>
+ </view>

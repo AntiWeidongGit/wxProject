@@ -1,0 +1,31 @@
+<!--pages/subscribe_Success/sub_Success.wxml-->
+<!-- 预约成功页面 -->
+<!-- 预约信息 -->
+<view class='top' wx:if="{{reservation!=null}}">
+    <view class='column'>
+      <image class='image' src='../../icon/icon_time.png' mode='scaleToFill'/>
+      <text>{{reservation.sub_time_str}}</text>
+   </view>
+   <view class='column'>
+      <image class='image' src='{{reservation.barber_photo}}' mode='scaleToFill'/>
+      <text>{{reservation.barber_name}}</text>
+   </view>
+   <view class='column'>
+      <image class='image' src='{{reservation.store_url}}' mode='scaleToFill'/>
+      <text>{{reservation.store_name}}</text>
+   </view>
+</view>
+
+
+<!-- 预约码 -->
+<view class='code'>
+  <text>预约码：{{reservation.sub_code}}\n</text>
+</view>
+<view class='text_center'>
+  <text>预约成功，请到个人页面查看。</text>
+</view>
+
+<button class='button' bindtap='goToSelf'>查看预约</button>
+<view class='text_bottom'>
+  <text>当前版本预约时，暂不选择发型</text>
+</view>

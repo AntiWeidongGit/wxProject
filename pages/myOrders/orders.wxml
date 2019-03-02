@@ -1,0 +1,8 @@
+<!--pages/myOrders/orders.wxml-->
+<import src='../template/barber.wxml'/><!--导入模板-->
+<view class='text'>
+  <text>我的订单记录</text>
+</view>
+ <view wx:for="{{works}}" wx:key="id">
+     <template is="barber_works" data="{{id:item.id,time:item.show_time,hairstyle:item.style,score:item.score,path:item.end_trackfile,price:item.payed_price,flag:1}}"/>
+ </view>

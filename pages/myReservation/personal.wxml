@@ -1,0 +1,81 @@
+<!-- 
+<view class="custom flex_center" style="padding-top:{{statusBarHeight}}px">
+  <text>demo</text>
+</view>
+<view class="empty_custom" style="padding-top:{{statusBarHeight}}px"></view> -->
+  
+ <view class='viewContainer'>
+ <view class="titleAll">
+ <view class="titleView">
+ <view class="return" bindtap='return'>
+  <image class="returnImg" src='../../icon/arrow_xia.png' mode='scaleToFill'></image>
+  <text class="" style=' margin-left:10rpx;margin-top:30rpx;line-height:0rpx;'>返回</text>
+ </view>
+ <view class="title">发现</view>
+ </view>
+  <view class="headView">
+     <image class='image2' src='{{info.image}}' mode='scaleToFill' bindtap='changeHeadPhoto'/>
+    <view class="headText">
+        <text class="textName">{{info.username}}</text>
+      <view class="infoMe"style='display:flex;flex-direction:row;'>
+        <text class="text4">理发次数:{{info.time}}</text>
+        <text class="text4">我的积分:{{info.credits}}</text>
+      </view>
+    </view>
+  </view>
+  </view>
+
+<view class="hairStyleView" style=''>
+  <view class='myHairStyle'>
+    <view class='view-left'>
+      <text class="myHairStyle_btn" style='padding-left:20rpx; padding-right:20rpx;left:80rpx;top:30rpx;'>颜值:{{headPhoto.face}}</text>
+      <text class="myHairStyle_btn" style='left:50rpx;top:110rpx; padding-left:20rpx;padding-right:20rpx;'>年龄:{{headPhoto.age}}</text>
+      <text class="myHairStyle_btn" style='left:80rpx;top:185rpx;padding-left:20rpx;padding-right: 20rpx; '>性别:{{headPhoto.sex}}</text>
+    </view>
+     <image class='image3' src='{{myHairSrc}}' mode='scaleToFill' bindtap='uploadHairPhoto' />
+    <view class='view-right'>
+      <text class="myHairStyle_btn" style='padding-left:20rpx; padding-right:20rpx;left:480rpx;top:30rpx;'>肤色:{{headPhoto.color}}</text>
+      <text class="myHairStyle_btn" style='padding-left:10rpx;padding-right:10rpx;left:510rpx;top:110rpx;'>脸型:{{headPhoto.type}}</text>
+      <text class="myHairStyle_btn" style='padding-left:20rpx;padding-right:20rpx;left:480rpx;top:185rpx;'>眼镜:{{headPhoto.glass}}</text>
+    </view>
+    </view>
+    <view class="hairStyleBottom"  bindtap='uploadHairPhoto'>重新检测我的发型</view>
+ </view>
+
+ <view class="lastList" style=''>
+ <view class='text2' bindtap='goToMyBarber'>
+  <image class='image4' src='../../icon/Customer/gongxiangdianpu.png' mode='scaleToFill'/>
+      <text style='margin-top:30rpx;width:80%;'>我的共享店铺</text>
+       <image class='image5'  src='../../icon/Customer/youjiantou.png' mode='scaleToFill'/>
+    </view>
+      <view style='line' style='width:98%;height:0px;border:0.8px solid #ccc;margin-left:17px;'></view>
+     <view class='text2' bindtap='goToMyBarber'>
+      <image class='image4' src='../../icon/Customer/wodefaxingshi.png' mode='scaleToFill'/>
+       <text style='margin-top:30rpx;width:80%;'>我的发型师</text>
+        <image class='image5' src='../../icon/Customer/youjiantou.png' mode='scaleToFill'/>
+    </view>
+    <view style='line' style='width:98%;height:0px;border:0.8px solid #ccc;margin-left:17px;'></view>
+    <view class='text2' bindtap='goToCoupon'>
+      <image class='image4' src='../../icon/Customer/wodeshouyi.png' mode='scaleToFill'/>
+       <text style='margin-top:30rpx;width:80%;'>我的收益</text>
+        <image class='image5' src='../../icon/Customer/youjiantou.png' mode='scaleToFill'/>
+    </view>
+    <view style='line' style='width:98%;height:0px;border:0.8px solid #ccc;margin-left:17px;'></view>
+    <view class='text2' bindtap='goToConsumption'>
+      <image class='image4' src='../../icon/Customer/wodexiaofeijilu.png' mode='scaleToFill'/>
+       <text style='margin-top:30rpx;width:80%;'>我的消费记录</text>
+        <image class='image5' src='../../icon/Customer/youjiantou.png' mode='scaleToFill'/>
+    </view>
+    
+ </view>
+   <view class='text2' bindtap='jumpToBarber' style='margin-top:25rpx; '>
+      <image class='image4' src='../../icon/Customer/qiehuanguke.png' mode='scaleToFill'/>
+       <text style='margin-top:25rpx;width:80%;'>切换为发型师</text>
+        <image class='image5' src='../../icon/Customer/youjiantou.png' mode='scaleToFill'/>
+    </view>
+       <view class='text2' bindtap='goToConsumption' style='margin-top:25rpx; '>
+       <image class='image4' src='../../icon/Customer/shezhi.png' mode='scaleToFill'/>
+       <text style='margin-top:25rpx;width:80%;'>设置</text>
+        <image class='image5' src='../../icon/Customer/youjiantou.png' mode='scaleToFill'/>
+    </view>
+ </view>

@@ -1,0 +1,49 @@
+<!-- 理发师模板 -->
+<template name='barber'>
+ <view style='display:flex;flex-direction:row;margin-top:1px;margin-left:2%;margin-bottom:0px; width:94%;background:white;border-width:5px;border-color:black; border-right: 1rpx solid black;border-top: 1rpx solid black;border-left: 1rpx solid black;border-bottom: 1rpx solid black;' data-id='{{id}}'>
+   <image style="width:100px;height:90px;margin-left:6px;margin-top:12px;margin-bottom:12px;" src='{{path}}' mode='scaleToFill'/>
+      <view style="display:flex;flex-direction:column;margin-left:10px;font-size:16px">
+         <text decode='true' style='margin-top:15px'>名称：{{name}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</text>
+         <view style='display:flex;flex-direction:row'>
+          <text decode='true' style='margin-top:6px'>级别：{{level}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;年限：{{years}}  &nbsp;&nbsp; </text> 
+           <navigator url='/pages/Dial/dial?phone={{phone}}'><image style="width:66px;height:60px;margin-left:-5px;margin-top:-35px;margin-bottom:0px;" src='../../icon/icon_call.png' mode='scaleToFill' /></navigator>
+         </view>
+         <view style='display:flex;flex-direction:row'>
+             <text style='margin-top:6px;' wx:if="{{status==3}}">状态：洗发中 </text> 
+             <text style='margin-top:6px;' wx:if="{{status==4}}">状态：理发中 </text>          
+             <text style='margin-top:6px;margin-right:20px;width:60%;' wx:if="{{status!=3 && status!=4 }}">状态：空闲中  </text>
+             <navigator url='/pages/Reservation/reserve?barberid={{id}}'><button style='color:white;background:green;position:relative; width:65px;height:33px;font-size:14px;margin-top:0px'>预约</button></navigator>
+         </view>   
+      </view>
+   </view>
+</template>
+
+<template name='time_reservations'>
+ <view style='display:flex;flex-direction:column;margin-top:0px;margin-left:2%;margin-right:2%;;border-width:5px;border-color:black; border-right: 1rpx solid black;border-top: 1rpx solid black;border-left: 1rpx solid black;border-bottom: 1rpx solid black;' data-id='{{id}}'>
+      <view style="display:flex;flex-direction:row;font-size:15px;background:lightgrey;text-align:center" >
+        <text wx:if="{{item.select0==0}}" style='margin-top:5px;width:32%;margin-left:10px' id='{{item.id}}' bindtap='select0' data-id='{{item}}'>{{item.slot0}}</text>
+        <text wx:elif="{{item.selected0==1}}" style='margin-top:5px;width:32%;margin-left:10px;background:red;color:white' id='{{item.id}}' bindtap='select0' data-id='{{item}}'>{{item.slot0}}</text>
+        <text wx:else style='margin-top:5px;width:32%;margin-left:10px;background:blue;color:white' id='{{item.id}}' bindtap='select0' data-id='{{item}}'>{{item.slot0}}</text>
+        <text wx:if="{{item.select1==0}}" style='margin-top:5px;width:32%' id='{{item.id}}' bindtap='select1' data-id='{{item}}'>{{item.slot1}}</text>
+        <text wx:elif="{{item.selected1==1}}" style='margin-top:5px;width:32%;background:red;color:white' id='{{item.id}}' bindtap='select1' data-id='{{item}}'>{{item.slot1}}</text>
+        <text wx:else style='margin-top:5px;width:32%;background:blue;color:white' id='{{item.id}}' bindtap='select1' data-id='{{item}}'>{{item.slot1}}</text>
+        <text wx:if="{{item.select2==0}}" style='margin-top:5px;width:32%' id='{{item.id}}' bindtap='select2' data-id='{{item}}'>{{item.slot2}}</text> 
+        <text wx:elif="{{item.selected2==1}}" style='margin-top:5px;width:32%;background:red;color:white' id='{{item.id}}' bindtap='select2' data-id='{{item}}'>{{item.slot2}}</text> 
+        <text wx:else style='margin-top:5px;width:32%;background:blue;color:white' id='{{item.id}}' bindtap='select2' data-id='{{item}}'>{{item.slot2}}</text>  
+      </view>
+    </view>
+</template>
+
+
+<template name='barber_works'>
+ <navigator url='/pages/photo_share/share?share_img={{path}}&flag={{flag}}' >
+  <view style='display:flex;flex-direction:row;margin-top:0px;margin-left:2%; width:94%;background:white;border-width:5px;border-color:black; border-right: 1rpx solid black;border-top: 1rpx solid black;border-left: 1rpx solid black;border-bottom: 1rpx solid black;' data-id='{{id}}'>
+   <image style="width:80px;height:70px;margin-left:6px;margin-top:10px;margin-bottom:6px;" src='{{path}}' mode='scaletoFill' />
+      <view style="display:flex;flex-direction:column;margin-left:18px;font-size:15px" > 
+         <text decode='true' style='margin-top:5px'>{{time}}   &nbsp;&nbsp;金额：￥{{price}}</text>   
+         <text decode='true' style='margin-top:5px'>发型:{{hairstyle}}</text> 
+           <text decode='true' style='margin-top:5px'>评分：{{score}} </text> 
+      </view>
+    </view>
+  </navigator>
+</template>

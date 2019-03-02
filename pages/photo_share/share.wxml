@@ -1,0 +1,14 @@
+<!--pages/photo_share/share.wxml-->
+<view class='img'>
+    <image src='{{img}}' mode='scaleToFill' style='margin-top:5%;width:100%;height:90%'></image>
+ </view>
+
+ <button open-type="share" class='button' disabled="{{flag!=1}}">分享</button>
+
+ <view class='text'>
+    <text wx:if="{{flag==1}}">分享给新朋友,朋友登陆后可以获得理发优惠券一张，您也可以保存至本地后分享到其他平台。</text>
+      <text wx:if="{{flag!=1}}">您没有分享和保存其他人作品的权限，如果是您本人作品，请至个人主页进行分享。</text>
+ </view>
+
+ <button class='button2' bindtap='saveToLocal' disabled="{{flag!=1}}"> 保存至相册</button>
+ 

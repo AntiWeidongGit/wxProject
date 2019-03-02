@@ -1,0 +1,84 @@
+/* pages/more/more.wxss */
+
+.container {
+  width: 100%;
+  height: 100%;
+  background: #F6F6F6;
+}
+
+
+.root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40rpx;
+}
+.root .q-item {
+  width: 90%;
+  height: 90rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 36rpx;
+}
+.root .q-item .q-title {
+  width: 45%;
+  height: 90rpx;
+  text-align: left;
+}
+.root .q-item .q-input {
+  width: 65%;
+  height: 90rpx;
+  text-align: right;
+  font-size: 60rpx;
+}
+.root .q-item .q-op {
+  width: 60%;
+  height: 90rpx;
+  text-align: right;
+  font-size: 32rpx;
+  color: #666666;
+  margin-right: 10rpx;
+  display: flex;
+  flex-direction: column;
+}
+.root .q-item .q-op .op-descrip {
+  text-align: right;
+  font-size: 32rpx;
+  color: #666666;
+}
+.root .q-item .q-more {
+  width: 10%;
+  height: 80rpx;
+  align-content: center;
+  margin-left: 10rpx;
+}
+.quiz .q-item .q-more .more-icon {
+  width: 30rpx;
+  height: 40rpx;
+}
+.root .q-tip {
+  width: 90%;
+  height: 80rpx;
+  font-size: 32rpx;
+  color: #909090;
+}
+
+.op-button {
+  width: 60%;
+  height: 100rpx;
+  margin-left: 20%;
+  margin-right: 20%;
+  margin-top: 60rpx;
+  margin-bottom: 10rpx;
+  font-size: 34rpx;
+}
+
+.usermotto {
+  margin-top: 10%;
+  margin-bottom: 30rpx;
+  font-size: 34rpx;
+  color: #909090;
+}

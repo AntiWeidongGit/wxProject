@@ -1,0 +1,11 @@
+
+<view>
+ <view class=""></view>
+ <view style='margin-top:100rpx;'>
+  <image src='{{myHairSrc}}'></image>
+  <view>
+   <button style='photoBtn' bindtap='yesToIndex'>确定</button>
+   <button style='photoBtn' bindtap='returnPhoto'>返回</button>
+  </view>
+ </view>
+</view>

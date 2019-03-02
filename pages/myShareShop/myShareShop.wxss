@@ -1,0 +1,69 @@
+.titleView{
+ display:flex;
+   position: fixed;
+  top:0rpx;
+  left:00rpx;
+  height: 110rpx;
+  width: 100%;
+  margin-top: 0rpx;
+
+}
+.return{
+  display: flex;
+  flex-direction: row;
+  margin: 0px;
+  margin-top: 50rpx;
+  margin-left: 10rpx;
+  font-size: 20px;
+  color: black
+ 
+}
+.returnImg{
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+  width: 20rpx;
+  height: 40rpx;
+  color: black
+}
+.title{
+  font-size: 20px;
+  margin-top: 54rpx;
+  color:black;
+  margin-left: 220rpx;
+}
+
+
+.shareShopView{
+  margin-top: 200rpx;
+}
+.shoplistMain{
+  display: flex;
+  flex-direction: row;
+ width: 100%;
+ height: 170rpx;
+   border: 1px solid gainsboro;
+}
+.shopImg{
+  margin-left: 20rpx;
+  margin-top: 20rpx;
+  width: 120rpx;
+  height: 120rpx;
+  border: 1px solid gainsboro;
+}
+.shopInfo{
+  width: 200rpx;
+  margin-left: 20rpx;
+  text-align: left;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+}
+
+.shopDis{
+    margin-left: 130rpx;
+    text-align: right
+}
+.shopListRadio{
+  margin-top: 50rpx;
+ 
+}
+

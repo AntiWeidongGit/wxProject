@@ -1,0 +1,10 @@
+
+<view class='main'>
+<view class='mainImg'>
+<view class='element'><image src=''></image><text>时间{{time}}</text></view>
+<view class='element'><image src=''></image><text>理发师{{}}</text></view>
+<view class='element'><image src=''></image><text>店铺{{}}， 地址{{address}}</text></view>
+</view>
+<view class='mainMoney'>已成功支付{{}}元</view>
+<button class='returnBtn'>返回首页</button>
+</view>

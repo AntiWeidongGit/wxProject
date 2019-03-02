@@ -1,0 +1,41 @@
+/* pages/myDateServer/DateServerInfo.wxss */
+
+.main{
+  display: flex;
+  flex-direction: column;
+}
+.mainImg{
+  display: flex;
+  justify-content:center;
+}
+.element{
+  display: flex;
+  flex-direction: column;
+  margin: 30rpx;
+  margin-top: 200rpx;
+  text-align: center;
+
+   width: 200rpx;
+   height: 200rpx;
+}
+.element image{
+  width: 100rpx;
+  height: 100rpx;
+  background-color: gainsboro;
+  margin-left: auto;
+  margin-right: auto;
+}
+.element text{
+  margin-top: 20rpx;
+   font-size: 30rpx;
+}
+.mainMoney{
+   width: 100%;
+   text-align: center;
+}
+
+.returnBtn{
+  margin-top: 90rpx;
+    width: 200rpx;
+    height: 80rpx;
+}
